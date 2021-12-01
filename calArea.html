@@ -47,15 +47,10 @@
 
           <button class="button" id="submitBtn">submit</button>
         </form>
-        <h2>Hypotenuse will be calculated here-</h2>
+        <h2>Area will be calculated here-</h2>
         <div class="outputHere">
-          <label class="label">C=</label>
-          <div style="display: inline" class="hypShowHere">
-            <span style="font-size: 1.8rem">√</span
-            ><span style="border-top: 2px solid black; padding-top: 0.1rem"
-              >a<sup>2</sup>+b<sup>2</sup></span
-            >
-          </div>
+          <label class="label">Area=</label>
+          <div style="display: inline" class="hypShowHere"></div>
         </div>
       </section>
     </div>
@@ -69,8 +64,10 @@
         e.preventDefault();
         lengthA = Number(inputSides[0].value);
         lengthB = Number(inputSides[1].value);
+        console.log(lengthA);
+        console.log(lengthB);
 
-        hypotenuse.innerText = Math.sqrt(lengthA * lengthA + lengthB * lengthB);
+        hypotenuse.innerText = Math.floor((1 / 2) * lengthA * lengthB);
       });
     </script>
   </body>
